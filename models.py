@@ -52,6 +52,5 @@ class Article(Base):
 
     author = relationship("Author")
 
-
     def __repr__(self):
         return f"Article({self.title})"

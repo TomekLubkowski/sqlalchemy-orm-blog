@@ -1,10 +1,13 @@
 from faker import Faker
 from session import session
 from models import Author, Article
+from faker import Faker
 
 
 def main():
-    author = session.query(Author).get(1)
+    author = session.query(Author).filter_by(
+        user_name="sammy"
+    ).one()
 
     fake = Faker()
     article = Article(
